@@ -1,0 +1,119 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+enum CardState
+{
+    Cooling,WaitingSun,Ready
+}
+
+public enum PlantType
+{
+    Sunflower,Peashooter,Wallnut
+}
+public class Card : MonoBehaviour
+{
+    // Start is called before the first frame update
+    private CardState cardState = CardState.Cooling;
+    public PlantType plantType = PlantType.Sunflower;
+
+    public GameObject cardLight;
+    public GameObject cardGark;
+    public Image cardMask;
+
+    [SerializeField]
+    private float cdTime = 2;
+    private float cdTimer = 0;
+
+    [SerializeField]
+    private int needSunPoint=50;
+
+
+
+    private void Update()
+    {
+        switch (cardState)
+        {
+            case CardState.Cooling:
+                CoolingUpdate();
+                break;
+            case CardState.WaitingSun:
+                WaitingSunUpdate();
+                break;
+            case CardState.Ready:
+                ReadyUpdate();
+                break;
+        }
+    }
+        void CoolingUpdate()
+        {
+            cdTimer += Time.deltaTime;
+
+            cardMask.fillAmount = (cdTime-cdTimer)/cdTime;
+
+            if (cdTimer >= cdTime)
+            {
+                TransitionToWaitingSun();
+            }
+
+        }
+
+        void WaitingSunUpdate()
+        {
+            if (needSunPoint <= Sunmanager.Instance.SunPoint) 
+            {
+                TransitionToReady();
+            }
+            
+            
+        }
+
+        void ReadyUpdate()
+        {
+            if (needSunPoint > Sunmanager.Instance.SunPoint) 
+            {
+                TransitionToWaitingSun();
+            }
+        }
+
+        void TransitionToWaitingSun()
+        {
+            cardState = CardState.WaitingSun;
+
+            cardLight.SetActive(false);
+            cardGark.SetActive(true);
+            cardMask.gameObject.SetActive(false);
+        }
+
+        void TransitionToReady()
+        {
+            cardState = CardState.Ready;
+
+            cardLight.SetActive(true);
+            cardGark.SetActive(false);
+            cardMask.gameObject.SetActive(false);
+        }
+        void TransitionToCooling()
+        {
+        cardState = CardState.Cooling;
+        cdTimer = 0;
+
+        cardLight.SetActive(false);
+        cardGark.SetActive(true);
+        cardMask.gameObject.SetActive(true);
+        }
+    public void OnClick()
+    {
+        if(needSunPoint > Sunmanager.Instance.SunPoint)return;
+
+        bool isSuccess= Handmanager.Instance.AddPlant(plantType);
+        if (isSuccess)
+        {
+            Sunmanager.Instance.SubSun(needSunPoint);
+
+            TransitionToCooling();
+        }
+    }
+    
+}
