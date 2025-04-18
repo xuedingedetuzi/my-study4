@@ -11,10 +11,12 @@ GameObject:
   - component: {fileID: 5178712759201129322}
   - component: {fileID: 5042262912696908819}
   - component: {fileID: 6618042798040598270}
-  - component: {fileID: 7872300566339449464}
+  - component: {fileID: -2059741713141209017}
+  - component: {fileID: 3742228795506253758}
+  - component: {fileID: 827124730207208254}
   m_Layer: 0
   m_Name: "\u5411\u65E5\u8475"
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,11 +74,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1388668257
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 020960385ebb5014db0fa7ac7469483b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7176471, g: 0.7176471, b: 0.7176471, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -107,7 +109,70 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7872300566339449464
+--- !u!114 &-2059741713141209017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4530570827327751223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04b7a78d1c1da574d9e4aa8f22f02f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantType: 0
+  HP: 100
+  produceDuration: 5
+  sunPrefab: {fileID: 8480232789899133351, guid: a186b7991b3393e48a1f1663c166add9, type: 3}
+  jumpMinDistance: 0.3
+  jumpMaxDistance: 2
+--- !u!61 &3742228795506253758
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4530570827327751223}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.012956142, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.15, y: 1.1666666}
+    newSize: {x: 1.15, y: 1.1666666}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.81313705, y: 1.1666666}
+  m_EdgeRadius: 0
+--- !u!114 &827124730207208254
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,3 +184,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d1ed0a7c3d08148bc1e783d7da5484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plantType: 0
+  HP: 100

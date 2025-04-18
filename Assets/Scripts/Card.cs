@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 enum CardState
 {
-    Cooling,WaitingSun,Ready
+    Disable,Cooling,WaitingSun,Ready
 }
 
 public enum PlantType
@@ -15,7 +15,7 @@ public enum PlantType
 public class Card : MonoBehaviour
 {
     // Start is called before the first frame update
-    private CardState cardState = CardState.Cooling;
+    private CardState cardState = CardState.Disable;
     public PlantType plantType = PlantType.Sunflower;
 
     public GameObject cardLight;
@@ -104,7 +104,8 @@ public class Card : MonoBehaviour
         cardMask.gameObject.SetActive(true);
         }
     public void OnClick()
-    {
+    {   
+        if(cardState==CardState.Disable)return;
         if(needSunPoint > Sunmanager.Instance.SunPoint)return;
 
         bool isSuccess= Handmanager.Instance.AddPlant(plantType);
@@ -114,6 +115,15 @@ public class Card : MonoBehaviour
 
             TransitionToCooling();
         }
+    }
+
+    public void DisableCard()
+    {
+        cardState=CardState.Disable;
+    }
+    public void EnableCard()
+    {
+        TransitionToCooling();
     }
     
 }
