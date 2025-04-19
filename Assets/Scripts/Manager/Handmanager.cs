@@ -53,6 +53,7 @@ public class Handmanager : MonoBehaviour
         if (isSuccess)
         {
             currentPlant = null;
+            Aduiomanager.Instance.PlayClip(Config.plant);
         }
     }
 }

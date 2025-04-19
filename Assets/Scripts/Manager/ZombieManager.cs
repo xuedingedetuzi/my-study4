@@ -28,7 +28,7 @@ public class ZombieManager : MonoBehaviour
     }
     private void Update()
     {
-        if (spawnState == SpawnState.NotStart && zombielist.Count == 0)
+        if (spawnState == SpawnState.End && zombielist.Count == 0)
         {
             GameManager.Instance.GameEndSuccess();
         }
@@ -51,23 +51,24 @@ public class ZombieManager : MonoBehaviour
 
     IEnumerator SpanwnZombie()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
         for (int i = 0; i < 5; i++)
         {
             SpawnARandomZombie();
-            yield return new WaitForSeconds(8);
+            yield return new WaitForSeconds(2);
         }
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(5);
         for (int i = 0; i < 10; i++)
         {
             SpawnARandomZombie();
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(1);
         }
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(5);
+        Aduiomanager.Instance.PlayClip(Config.lastwave);
         for (int i = 0; i < 15; i++)
         {
             SpawnARandomZombie();
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1);
         }
         spawnState = SpawnState.End;
     }

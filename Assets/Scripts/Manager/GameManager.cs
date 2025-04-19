@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
         ZombieManager.Instance.Pause();
         cardListUI.DisableCardList();
         Sunmanager.Instance.StopProduce();
+        Aduiomanager.Instance.PlayClip(Config.lose_music);
     }
 
     public void GameEndSuccess()
@@ -49,7 +50,7 @@ public class GameManager : MonoBehaviour
         winui.Show();
         cardListUI.DisableCardList();
         Sunmanager.Instance.StopProduce();
-
+        Aduiomanager.Instance.PlayClip(Config.win_music);
     }
     void ShowReadyUI()
     {
@@ -60,5 +61,6 @@ public class GameManager : MonoBehaviour
         Sunmanager.Instance.StartProduce();
         ZombieManager.Instance.StartSpawn();
         cardListUI.ShowCardList();
+        Aduiomanager.Instance.PlayBgm(Config.bgm1);
     }
 }

@@ -105,6 +105,7 @@ public class Card : MonoBehaviour
         }
     public void OnClick()
     {   
+        Aduiomanager.Instance.PlayClip(Config.btn_click);   
         if(cardState==CardState.Disable)return;
         if(needSunPoint > Sunmanager.Instance.SunPoint)return;
 

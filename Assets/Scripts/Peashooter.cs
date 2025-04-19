@@ -24,6 +24,7 @@ public class Peashooter : Plant
     }
     void Shoot()
     {
+        Aduiomanager.Instance.PlayClip(Config.shoot);
         PeaBullet pb =GameObject.Instantiate(peaBulletPrefab, shootPointTransform.position,Quaternion.identity);
         pb.SetSpeed(bulletSpeed);
         pb.SetATKValue(atkValue);

@@ -21,6 +21,7 @@ public class winUI : MonoBehaviour
     }
     public void Show()
     {
+        
         anim.enabled = true;
     }
 }

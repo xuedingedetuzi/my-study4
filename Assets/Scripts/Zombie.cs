@@ -59,6 +59,7 @@ public class Zombie : MonoBehaviour
         atkTimer+= Time.deltaTime;
         if (atkTimer > atkDuration&&currentEatPlant!=null)
         {
+            Aduiomanager.Instance.PlayClip(Config.eat);
             currentEatPlant.TakeDamage(atkValue);
             atkTimer=0;
         }
