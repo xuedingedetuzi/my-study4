@@ -16,6 +16,7 @@ public class Cell : MonoBehaviour
         if(currentPlant!=null) return false;
         currentPlant = plant;
         currentPlant.transform.parent = transform;
+        currentPlant.transform.position = transform.position;
         plant.TransitionToEnable();
         return true;
     }

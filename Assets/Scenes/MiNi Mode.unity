@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 98866451}
   - component: {fileID: 98866450}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Remind Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -625,6 +625,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec5f80a03a76ce4598f514fa060e10f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputPanelGo: {fileID: 0}
+  nameInputField: {fileID: 0}
+  nameText: {fileID: 0}
 --- !u!114 &972163143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,7 +668,7 @@ GameObject:
   - component: {fileID: 2147018868}
   - component: {fileID: 2147018867}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Menu Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -735,8 +738,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 972163142}
-        m_TargetAssemblyTypeName: "\u8DF3\u8F6C, Assembly-CSharp"
-        m_MethodName: MiNicaiDanButtonClick
+        m_TargetAssemblyTypeName: jump, Assembly-CSharp
+        m_MethodName: MenuButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

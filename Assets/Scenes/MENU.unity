@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 63843090}
   - component: {fileID: 63843089}
   m_Layer: 5
-  m_Name: "\u91CD\u547D\u540D"
+  m_Name: Rename Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 146974717}
   - component: {fileID: 146974716}
   - component: {fileID: 146974718}
+  - component: {fileID: 146974719}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -259,6 +260,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fea74180d452604479d126cc6dfb6d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &146974719
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146974715}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &384368088
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +368,7 @@ GameObject:
   - component: {fileID: 384368091}
   - component: {fileID: 384368090}
   m_Layer: 5
-  m_Name: "\u80CC\u666F"
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -505,7 +602,7 @@ GameObject:
   - component: {fileID: 582267296}
   - component: {fileID: 582267295}
   m_Layer: 5
-  m_Name: "\u8FF7\u4F60\u6E38\u620F"
+  m_Name: MiNi Mode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -637,7 +734,7 @@ GameObject:
   - component: {fileID: 790150507}
   - component: {fileID: 790150506}
   m_Layer: 5
-  m_Name: "\u786E\u8BA4\u6309\u94AE"
+  m_Name: True Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -769,7 +866,7 @@ GameObject:
   - component: {fileID: 948390283}
   - component: {fileID: 948390282}
   m_Layer: 5
-  m_Name: "\u6B22\u8FCE"
+  m_Name: Welcome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -845,7 +942,7 @@ GameObject:
   - component: {fileID: 1005164689}
   - component: {fileID: 1005164688}
   m_Layer: 5
-  m_Name: "\u7528\u6237\u540D"
+  m_Name: User
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1114,7 +1211,7 @@ GameObject:
   - component: {fileID: 1398364771}
   - component: {fileID: 1398364770}
   m_Layer: 5
-  m_Name: "\u5192\u9669\u6A21\u5F0F"
+  m_Name: Adventure Mode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1466,7 +1563,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1585058516}
   m_Layer: 5
-  m_Name: "\u7528\u6237\u540D\u8BBE\u7F6E"
+  m_Name: User Setting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1733,7 +1830,7 @@ GameObject:
   - component: {fileID: 1759822174}
   - component: {fileID: 1759822173}
   m_Layer: 5
-  m_Name: "\u76CA\u667A\u6A21\u5F0F"
+  m_Name: Yizi Mode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1865,7 +1962,7 @@ GameObject:
   - component: {fileID: 1809078772}
   - component: {fileID: 1809078771}
   m_Layer: 5
-  m_Name: "\u7528\u6237\u540D\u4FEE\u6539"
+  m_Name: User rename
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

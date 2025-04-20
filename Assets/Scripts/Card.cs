@@ -19,7 +19,7 @@ public class Card : MonoBehaviour
     public PlantType plantType = PlantType.Sunflower;
 
     public GameObject cardLight;
-    public GameObject cardGark;
+    public GameObject cardGray;
     public Image cardMask;
 
     [SerializeField]
@@ -82,7 +82,7 @@ public class Card : MonoBehaviour
             cardState = CardState.WaitingSun;
 
             cardLight.SetActive(false);
-            cardGark.SetActive(true);
+            cardGray.SetActive(true);
             cardMask.gameObject.SetActive(false);
         }
 
@@ -91,7 +91,7 @@ public class Card : MonoBehaviour
             cardState = CardState.Ready;
 
             cardLight.SetActive(true);
-            cardGark.SetActive(false);
+            cardGray.SetActive(false);
             cardMask.gameObject.SetActive(false);
         }
         void TransitionToCooling()
@@ -100,7 +100,7 @@ public class Card : MonoBehaviour
         cdTimer = 0;
 
         cardLight.SetActive(false);
-        cardGark.SetActive(true);
+        cardGray.SetActive(true);
         cardMask.gameObject.SetActive(true);
         }
     public void OnClick()

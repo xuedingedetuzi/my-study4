@@ -26,6 +26,6 @@ public class Aduiomanager : MonoBehaviour
     public void PlayClip(string path,float volume=1)
     {
         AudioClip ac =Resources.Load<AudioClip>(path);
-        AudioSource.PlayClipAtPoint(ac, transform.position,volume);
+        AudioSource.PlayClipAtPoint(ac, transform.position, volume);
     }
 }

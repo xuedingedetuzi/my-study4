@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3405613029740796947}
   - component: {fileID: -6863462485750147394}
   m_Layer: 0
-  m_Name: "\u8C4C\u8C46\u5C04\u624B"
+  m_Name: Peashooter
   m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -10,6 +10,7 @@ public class Handmanager : MonoBehaviour
     public List<Plant> plantPrefabList;
 
     private Plant currentPlant;
+
     private void Awake()
     {
         Instance = this;

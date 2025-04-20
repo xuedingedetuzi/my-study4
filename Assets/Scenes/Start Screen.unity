@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 225169628}
   - component: {fileID: 225169627}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Start Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 335635412}
   - component: {fileID: 335635411}
   m_Layer: 5
-  m_Name: "\u5F00\u59CB\u80CC\u666F"
+  m_Name: Start bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

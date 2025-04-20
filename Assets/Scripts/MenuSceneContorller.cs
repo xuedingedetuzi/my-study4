@@ -10,44 +10,54 @@ public class MenuSceneContorller : MonoBehaviour
     public GameObject inputPanelGo;
     public TMP_InputField nameInputField;
     public TextMeshProUGUI nameText;
+    private Aduiomanager audio;
+
+    public void jump(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
 
     private void Start()
     {
         UpdateNameUI();
+        audio =Aduiomanager.Instance;
     }
     public void OnChangeNameButtonClick()
     {
         string name = PlayerPrefs.GetString("Name", "");
         nameInputField.text = name;
         inputPanelGo.SetActive(true);
-        Aduiomanager.Instance.PlayClip(Config.btn_click);
+        audio.PlayClip(Config.btn_click);
     }
     public void OnSubmitButtonClick()
     {
         PlayerPrefs.SetString("Name",nameInputField.text);
         inputPanelGo.SetActive(false);
         UpdateNameUI();
-        Aduiomanager.Instance.PlayClip(Config.btn_click);
+        audio.PlayClip(Config.btn_click);
     }
     void UpdateNameUI()
     {
         string name =PlayerPrefs.GetString("Name","-");
-        nameText.text = name;
+        if (nameText != null)
+        {
+            nameText.text = name;
+        }
     }
     public void OnAdventureButtonClick()
     {
-        Aduiomanager.Instance.PlayClip(Config.btn_click);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        audio.PlayClip(Config.btn_click);
+        jump("Adventure Mode");
     }
     public void YiZhiButtonClick()
     {
-        Aduiomanager.Instance.PlayClip(Config.btn_click);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        audio.PlayClip(Config.btn_click);
+        jump("Yizi Mode");
     }
     public void MiNiButtonClick()
     {
-        Aduiomanager.Instance.PlayClip(Config.btn_click);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        audio.PlayClip(Config.btn_click);
+        jump("MiNi Mode");
     }
     
 }
